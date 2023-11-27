@@ -1,0 +1,16 @@
+{
+  "name": "passport-backend",
+  "version": "1.0.0",
+  "description": "The backend for Dynamic Webdevelopemnt Project at Thammasat University CS100 Courses",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Krittamark",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2"
+  }
+}
