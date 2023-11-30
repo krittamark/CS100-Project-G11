@@ -53,13 +53,13 @@ body {
 }
 
 .logo img{
-    width: 30%;
+    width: 40%;
 }
 
 .container {
-    max-width: 1800px;
+    max-width: 19200px;
     margin: 0 auto;
-    border: 1px solid red;
+    /*border: 1px solid red;*/
 }
 .nav-con{
     display: flex;
