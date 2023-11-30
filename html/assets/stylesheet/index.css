@@ -84,7 +84,7 @@ body {
 }
 
 .container {
-    max-width: 19200px;
+    padding: 0 10rem;
     margin: 0 auto;
     /*border: 1px solid red;*/
 }
