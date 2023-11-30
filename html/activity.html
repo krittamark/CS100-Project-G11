@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="assets/stylesheet/main.css">
   <link rel="stylesheet" href="assets/stylesheet/activity.css">
 </head>
 <body>
@@ -38,6 +39,35 @@
       </div>
     </div>
   </section>
-  
+  <div class="form_container">
+    <h1>CSTU PASSPORT</h1>
+      <form id="myform" action="#" method="post">
+        <div class="form-group">
+          <label for="fullname">Firstname and Lastname</label>
+          <input type="text" id="fullname" name="fullname">
+          <small>Only your first name and lastname, middle name is not necessary.</small>
+          <span id="fullnameError" class="erroe">Please enter both your Firstname and Lastname.</span>
+        </div>
+        <div class="form-group">
+          <label for="studentID">Student ID</label>
+          <input type="text" id="studentID" name="studentID">
+          <small>Please enter your 10-digit student ID.</small>
+          <span id="studentIDError" class="Errie"></span>
+        </div>
+        <div class="form-group">
+          <label for="email">University Email</label>
+          <input type="email" id="email" name="email">
+          <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
+          <span id="emailError" class="error"></span>
+        </div>
+        <div class="form-group">
+          <label for="workTitle">Work/Activity Title</label>
+          <input type="text" id="workTitle" name="workTitle">
+        </div>
+        <div class="form-group">
+          <label for="activityType">Type of work/Activity</label>
+        </div>
+      </form>
+  </div>
 </body>
 </html>
