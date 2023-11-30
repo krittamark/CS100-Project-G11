@@ -8,6 +8,9 @@
 img {
   max-width: 100%;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   background-color: #fff;
@@ -42,20 +45,19 @@ section.content__section {
 }
 
 .button-primary {
-  background-color: #F83F61;
+  background-color: #f83f61;
   color: #fff;
 }
 
 .button-secondary {
-  border: 1px solid #F83F61;
-  color: #F83F61;
+  border: 1px solid #f83f61;
+  color: #f83f61;
 }
 
 .button-primary:hover {
   background-color: #f80000;
   color: #000000;
   transition: 200ms ease-in-out color;
-  
 }
 
 .button-secondary:hover {
@@ -64,7 +66,6 @@ section.content__section {
   transition: 200ms ease-in-out color;
 }
 
-
 /**
  * NAVIGATION BAR STYLES
  */
@@ -72,7 +73,7 @@ section.content__section {
   background-color: black;
 }
 
-.logo img{
+.logo img {
   width: 40%;
 }
 
@@ -80,14 +81,14 @@ section.content__section {
   padding: 0 10rem;
   margin: 0 auto;
 }
-.nav-con{
+.nav-con {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 60px;
 }
 
-.menu{
+.menu {
   display: flex;
 }
 .menu a {
@@ -103,7 +104,7 @@ section.content__section {
   float: right;
 }
 
-.topnav input[type=text] {
+.topnav input[type="text"] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -125,7 +126,8 @@ section.content__section {
   background: #ccc;
 }
 
-.topnav input[type=text], .topnav .search-container button {
+.topnav input[type="text"],
+.topnav .search-container button {
   float: none;
   display: block;
   text-align: left;
@@ -133,6 +135,6 @@ section.content__section {
   margin: 0;
   padding: 14px;
 }
-.topnav input[type=text] {
-  border: 1px solid #ccc;  
+.topnav input[type="text"] {
+  border: 1px solid #ccc;
 }
