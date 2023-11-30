@@ -138,3 +138,8 @@ section.content__section {
 .topnav input[type=text] {
   border: 1px solid #ccc;  
 }
+
+.menu a:hover{
+  color: #F83F61 ;
+  transition: .2s ease-in-out;
+}
