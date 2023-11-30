@@ -7,7 +7,6 @@
 
 img {
   max-width: 100%;
-
 }
 
 body {
@@ -15,7 +14,6 @@ body {
   font-family: ProductSans;
   font-weight: 400;
   font-size: 16px;
-
 }
 
 section.content__section {
@@ -30,7 +28,7 @@ section.content__section {
   flex-direction: column;
 }
 
-
+x
 .button {
   text-decoration: none;
   outline: none;
