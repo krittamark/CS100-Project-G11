@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*team*/
+.content_team {
+    border: 1px solid red;
+    padding: 50px;
+}
+
+.text_wrapper {
+    border: 1px solid red;
+    padding: 5px;
+}
+
+.text_team {
+    text-align: center;
+}
+
+.img_team {
+    border: 1px solid red;
+    padding: 10px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.img_team img {
+    border-radius: 100%;
+    width: 7%;
+    height: 7%;
+    flex-wrap: wrap ;
+}
+
+.member_text {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+.member_text span {
+    border: 1px solid red;
+}
