@@ -11,11 +11,15 @@
 
 .content__section#head {
   background-color: #fbfbfd;
-  min-height: 50vh;
+  min-height: 60vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+.content__section#head .content__wrapper{
+  margin-bottom: 70px;
+}
+
 .headline__wrapper {
   display: flex;
   flex-direction: column;
@@ -93,4 +97,10 @@
   }
 }
 @media (min-width: 1025px) {
+  .content__wrapper {
+    width: 1000px
+  }
+  .content__section#head {
+    padding: 0 200px;
+  }
 }

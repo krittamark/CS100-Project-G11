@@ -15,7 +15,8 @@ body {
   font-family: ProductSans;
   font-weight: 400;
   font-size: 16px;
-
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 section.content__section {
