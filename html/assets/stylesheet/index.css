@@ -74,3 +74,35 @@ body {
         justify-content: start;
     }
 }
+
+.nav {
+    background-color: black;
+}
+
+.logo img{
+    width: 40%;
+}
+
+.container {
+    max-width: 19200px;
+    margin: 0 auto;
+    /*border: 1px solid red;*/
+}
+.nav-con{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.menu{
+    display: flex;
+}
+.menu a {
+    color: black;
+    text-decoration: none;
+}
+.menu li {
+    list-style: none;
+    margin-left: 1rem;
+}
