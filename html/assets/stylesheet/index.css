@@ -33,9 +33,7 @@ body {
 
 .img_team img {
     border-radius: 100%;
-    width: 7%;
-    height: 7%;
-    flex-wrap: wrap ;
+    width: 100px;
 }
 
 .member_text {
