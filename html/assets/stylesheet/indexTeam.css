@@ -1,7 +1,7 @@
 /*team*/
 .content_team {
   /*border: 1px solid red;*/
-  padding: 0 15%;
+  padding: 0 10%;
 }
 
 .text_wrapper {
@@ -24,11 +24,12 @@
 .img_team img {
   border-radius: 100%;
   width: 80px;
+  padding: 3px;
 }
 
 .member_text {
   /*border: 1px solid red;*/
-  margin-top: 20px;
+  margin-top: 10px;
   padding: 10px;
   text-align: center;
 }
@@ -42,7 +43,7 @@
 
 @media (min-width: 600px) {
   .content_team {
-    padding: 0 15%;
+    padding: 0 10%;
   }
 
   .text_wrapper {
