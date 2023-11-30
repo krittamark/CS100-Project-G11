@@ -152,3 +152,53 @@ section.content__section {
 @media (min-width:1025px) {
 
 }
+.button-primary:hover {
+  background-color: #f80000;
+  color: #000000;
+  transition: 200ms ease-in-out color;
+  
+}
+
+.button-secondary:hover {
+  background-color: white;
+  color: #000000;
+  transition: 200ms ease-in-out color;
+}
+
+.topnav .search-container {
+  float: right;
+}
+
+.topnav input[type=text] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px 10px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+.topnav input[type=text], .topnav .search-container button {
+  float: none;
+  display: block;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+  padding: 14px;
+}
+.topnav input[type=text] {
+  border: 1px solid #ccc;  
+}
