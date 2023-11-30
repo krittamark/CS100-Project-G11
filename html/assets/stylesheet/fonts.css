@@ -1,22 +1,22 @@
 @font-face {
     font-family: ProductSans;
-    src: url(../fonts/ProductSans-Regular.ttf);
+    src: url(../fonts/ProductSansRegular.ttf);
     font-weight: 400;
 }
 @font-face {
     font-family: ProductSans;
-    src: url(../fonts/ProductSans-Bold.ttf);
+    src: url(../fonts/ProductSansBold.ttf);
     font-weight: 700;
 }
 @font-face {
     font-family: ProductSans;
-    src: url(../fonts/ProductSans-Italic.ttf);
+    src: url(../fonts/ProductSansItalic.ttf);
     font-weight: 400;
     font-style: italic;
 }
 @font-face {
     font-family: ProductSans;
-    src: url(../fonts/ProductSans-BoldItalic.ttf);
+    src: url(../fonts/ProductSansBoldItalic.ttf);
     font-weight: 700;
     font-style: italic;
 }
