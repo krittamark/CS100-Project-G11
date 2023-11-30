@@ -1,68 +1,3 @@
-@font-face {
-    font-family: ProductSans;
-    src: url(../fonts/ProductSans-Regular.ttf);
-    font-weight: 400;
-}
-@font-face {
-    font-family: ProductSans;
-    src: url(../fonts/ProductSans-Bold.ttf);
-    font-weight: 700;
-}
-@font-face {
-    font-family: ProductSans;
-    src: url(../fonts/ProductSans-Italic.ttf);
-    font-weight: 400;
-    font-style: italic;
-}
-@font-face {
-    font-family: ProductSans;
-    src: url(../fonts/ProductSans-BoldItalic.ttf);
-    font-weight: 700;
-    font-style: italic;
-}
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  .nav {
-    background-color: black;
-}
-
-.logo img{
-    width: 40%;
-}
-
-.container {
-    padding: 0 10rem;
-    margin: 0 auto;
-    /*border: 1px solid red;*/
-}
-.nav-con{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 60px;
-}
-
-.menu{
-    display: flex;
-}
-.menu a {
-    color: black;
-    text-decoration: none;
-    transition: 200ms ease-in-out color;
-}
-.menu li {
-    list-style: none;
-    margin-left: 1rem;
-}
-.menu a:hover{
-    color: #F83F61;
-    transition: 200ms ease-in-out color;
-}
-
 #head {
     padding: 0 10rem;
     margin: 0 auto;
@@ -98,6 +33,90 @@
 .con-form a:hover{
     color: black;
 }
+
+/** css for form */
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling for the form container */
+  .form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Center-align the heading and add margin at the bottom */
+  .form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for each form group */
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for form group labels */
+  .form-group label {
+    display: block;
+    font-weight: bold;
+  }
+  
+  /* Styling for various form input types */
+  .form-group input[type="text"],
+  .form-group input[type="email"],
+  .form-group select,
+  .form-group textarea,
+  .form-group input[type="datetime-local"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Allow vertical resizing for textareas */
+  .form-group textarea {
+    resize: vertical;
+  }
+  
+  /* Styling for select dropdowns */
+  .form-group select {
+    width: 100%;
+  }
+  
+  /* Styling for the submit button */
+  .form-group input[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Styling for small helper text */
+  .form-group small {
+    font-size: 12px;
+    color: #888;
+  }
+  
+  /* New styles for error messages */
+  
+  /* Position the error message relatively within the form group */
+  .form-group {
+    position: relative;
+  }
+  
+  /* Styling for error messages */
+  .error {
+    color: red;
+    display: block;
+    margin-top: 5px;
+  }
 
 
 
