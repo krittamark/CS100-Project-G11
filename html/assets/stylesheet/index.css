@@ -40,9 +40,13 @@ body {
 
 .member_text {
     border: 1px solid red;
-    padding: 10px;
+    padding: 30px;
+    text-align: center;
 }
 
 .member_text span {
-    border: 1px solid red;
+    border: 1px solid rgb(206, 206, 206);
+    background-color: rgb(206, 206, 206);
+    border-radius: 15px;
+    padding: 20px;
 }
