@@ -97,7 +97,7 @@ section.content__section {
 }
 .menu li {
   list-style: none;
-  margin-left: 1rem;
+  margin-left: 3rem;
 }
 
 .topnav .search-container {
@@ -135,6 +135,11 @@ section.content__section {
   margin: 0;
   padding: 14px;
 }
-.topnav input[type="text"] {
-  border: 1px solid #ccc;
+.topnav input[type=text] {
+  border: 1px solid #ccc;  
+}
+
+.menu a:hover{
+  color: #F83F61 ;
+  transition: .2s ease-in-out;
 }
