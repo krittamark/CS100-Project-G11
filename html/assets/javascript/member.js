@@ -65,6 +65,7 @@ function handleClick(memberName) {
   document.getElementById('member-name').innerText = `${memberData[memberName].name} (${memberData[memberName].nickname})`;
   document.getElementById('member-sid').innerText = memberData[memberName].sid;
   document.getElementById('member-dept').innerText = memberData[memberName].dept;
+  document.getElementById('member-description').innerText = memberData[memberName].description;
 
   const memberSocial = document.querySelector('.member__socials');
   memberSocial.innerHTML = '';
