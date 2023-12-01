@@ -49,7 +49,7 @@ const memberData = {
     "socials": [
       {
         "name": "Instagram",
-        "url": "https://www.instagram.com/[NUN]"
+        "url": "https://www.instagram.com/nun.nattanun/"
       }
     ]
   }
