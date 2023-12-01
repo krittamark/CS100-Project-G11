@@ -78,7 +78,7 @@
   .content__section#head {
     justify-content: start;
   }
-  .content__wrapper {
+  .content__section#head .content__wrapper {
     padding: 0 10%;
     width: 550px;
   }
