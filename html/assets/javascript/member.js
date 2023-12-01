@@ -34,8 +34,8 @@ const memberData = {
         "url": "https://www.instagram.com/njj_jk14"
       },
       {
-        name: "facebook",
-        url: "https://www.facebook.com/jiraporn.jaiyasuk"
+        "name": "facebook",
+        "url": "https://www.facebook.com/jiraporn.jaiyasuk"
       }
     ]
   },
