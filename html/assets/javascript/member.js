@@ -5,7 +5,7 @@ const memberData = {
     "sid": "6609490062",
     "dept": "Computer Science, Faculty of Science and Technology",
     "image": "assets/images/member/markmark.webp",
-    "description": "",
+    "description": "He is a computer science student at Thammasat University. Who is interested in web development. He will graduate about in 2026. He has a good knowledge of HTML, CSS, JavaScript, PHP, SQL. He was a trainee web developer since March 2023 - May 2023 at ETDA Thailand. His current goal is to be a full-stack web developer.",
     "socials": [
       {
         "name": "Facebook",
