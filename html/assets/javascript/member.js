@@ -31,11 +31,11 @@ const memberData = {
     "socials": [
       {
         "name": "Instagram",
-        "url": "https://www.instagram.com/[KANING]"
+        "url": "https://www.instagram.com/njj_jk14"
       },
       {
         name: "facebook",
-        url: "sssss"
+        url: "https://www.facebook.com/jiraporn.jaiyasuk"
       }
     ]
   },
