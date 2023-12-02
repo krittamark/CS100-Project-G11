@@ -81,7 +81,7 @@ function createSocialElement(social) {
   socialElement.target = '_blank';
 
   const socialImage = document.createElement('img');
-  socialImage.src = `assets/images/logo/${social.name.toLowerCase()}.svg`;
+  socialImage.src = `assets/images/logo/social/${social.name.toLowerCase()}.svg`;
   socialImage.alt = `${social.name} Logo`;
   socialImage.classList.add('member__socialImage');
 
