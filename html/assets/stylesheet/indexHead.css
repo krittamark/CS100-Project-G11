@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
 }
-.content__section#head .content__wrapper{
+.content__section#head .content__wrapper {
   margin-bottom: 70px;
 }
 
@@ -34,6 +34,9 @@
   color: #000;
   text-align: center;
   margin-bottom: 1rem;
+  background: linear-gradient(to right, #F83F61, #f9c349);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
 }
 .headline__subtext {
   font-size: 1rem;
@@ -118,7 +121,7 @@
 }
 @media (min-width: 1025px) {
   .content__wrapper {
-    width: 1000px
+    width: 1000px;
   }
   .content__section#head {
     padding: 0 200px;

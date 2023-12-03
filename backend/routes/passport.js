@@ -3,9 +3,10 @@
  */
 const express = require('express');
 const router = express.Router();
+const fileUpload = require('express-fileupload');
 const fs = require('fs');
 
-router.get('/passport', (req, res) => {
+router.get('/passport',  (req, res) => {
   fs.readFile('databases/records.json', 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading records.json:', err);
@@ -33,12 +34,12 @@ router.get('/passport', (req, res) => {
 });
 
 
-router.post('/passport', (req, res) => {
+router.post('/passport', fileUpload(), (req, res) => {
   const data = req.body;
-
+  console.log(req.body);
   // Check for mandatory fields in the incoming request
   if (!data.name || !data.studentID || !data.email || !data.workTitle ||
-    !data.activityType || !data.academicYear || !data.semester || !data.startDate || !data.endDate || !data.location || !data.description) {
+    !data.activityType || !data.academicYear || !data.semester || !data.startDate || !data.endDate || !data.location || !data.description || !req.activityImage) {
     return res.status(400).send({
       success: false,
       code: 400,
@@ -63,7 +64,7 @@ router.post('/passport', (req, res) => {
     name: data.name,
     studentID: data.studentID,
     email: data.email,
-    title: data.title,
+    workTitle: data.workTitle,
     activityType: data.activityType,
     academicYear: data.academicYear,
     semester: data.semester,
@@ -71,6 +72,7 @@ router.post('/passport', (req, res) => {
     endDate: data.endDate,
     location: data.location,
     description: data.description,
+    activityImage: "assets/images/activities/" + data.workTitle + ".jpg"
   };
 
   let records = [];
@@ -85,8 +87,9 @@ router.post('/passport', (req, res) => {
 
   records.push(record);
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
-  let imagefile = req.files.activityImage;
-  imagefile.mv(`../html/assets/images/activities/${data.workTitle}.jpg`, (err) => {
+  console.log(req.files);
+  let activityImage = req.files.activityImage;
+  activityImage.mv(`../html/assets/images/activities/${data.workTitle}.jpg`, (err) => {
     if (err) {
       console.log(err);
       return res.status(500).send({
