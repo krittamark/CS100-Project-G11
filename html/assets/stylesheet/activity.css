@@ -10,7 +10,7 @@
   padding: 50px;
   border: none;
   border-radius: 25px;
-  width: 70%;
+  width: 80%;
 }
 .form__dialog::backdrop {
   backdrop-filter: blur(4px);
@@ -85,7 +85,7 @@
 }
 
 .contentTitle__wrapper {
-  padding: 0 15%;
+  padding: 0 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -177,4 +177,16 @@
   font-weight: 600;
   margin: 0;
   padding: 0;
+}
+
+@media (min-width: 600px) {
+  .form__dialog {
+    width: 70%;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form__dialog {
+    width: 50%;
+  }
 }
