@@ -37,8 +37,8 @@ router.post('/passport', (req, res) => {
   const data = req.body;
 
   // Check for mandatory fields in the incoming request
-  if (!data.first_name || !data.last_name || !data.student_id || !data.email || !data.title ||
-    !data.type_of_work_id || !data.academic_year || !data.semester || !data.start_date || !data.end_date || !data.location || !data.description) {
+  if (!data.name || !data.studentID || !data.email || !data.workTitle ||
+    !data.activityType || !data.academicYear || !data.semester || !data.startDate || !data.endDate || !data.location || !data.description) {
     return res.status(400).send({
       success: false,
       code: 400,
@@ -48,7 +48,7 @@ router.post('/passport', (req, res) => {
   }
 
   // Validate that the start and end dates provided fall within the academic calendar
-  const dateValidationError = validateDates(data.academic_year, data.semester, data.start_date, data.end_date);
+  const dateValidationError = validateDates(data.academicYear, data.semester, data.startDate, data.endDate);
   if (dateValidationError) {
     return res.status(400).json({
       success: false,
@@ -60,16 +60,15 @@ router.post('/passport', (req, res) => {
 
   // Structure the record for saving
   const record = {
-    first_name: data.first_name,
-    last_name: data.last_name,
-    student_id: data.student_id,
+    name: data.name,
+    studentID: data.studentID,
     email: data.email,
     title: data.title,
-    type_of_work_id: data.type_of_work_id,
-    academic_year: data.academic_year,
+    activityType: data.activityType,
+    academicYear: data.academicYear,
     semester: data.semester,
-    start_date: data.start_date,
-    end_date: data.end_date,
+    startDate: data.startDate,
+    endDate: data.endDate,
     location: data.location,
     description: data.description,
   };
@@ -81,17 +80,52 @@ router.post('/passport', (req, res) => {
     records = JSON.parse(jsonData);
   } catch (err) {
 
-    
+
   }
 
   records.push(record);
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
   res.status(200).json({
-      success: true,
-      code: 200,
-      message: 'Record added successfully!',
-      data: record
-    });
+    success: true,
+    code: 200,
+    message: 'Record added successfully!',
+    data: record
+  });
 });
 
 module.exports = router;
+
+
+function validateDates(academicYear, semester, startDate, endDate) {
+  try {
+    const calendarData = fs.readFileSync('databases/calendar.json');
+    const calendars = JSON.parse(calendarData);
+
+    const yearData = calendars[academicYear];
+    if (!yearData) {
+      return 'Academic year not found in calendar.';
+    }
+
+    const semesterData = yearData.find(s => s.semester === parseInt(semester));
+    console.log(yearData);
+    if (!semesterData) {
+      console.log('Semester not found in calendar.', academicYear, parseInt(semester));
+      return 'Semester not found in calendar.';
+    }
+
+    const calendarStartDate = new Date(semesterData.startDate);
+    const calendarEndDate = new Date(semesterData.endDate);
+    const clientStartDate = new Date(startDate);
+    const clientEndDate = new Date(endDate);
+
+    console.log(calendarStartDate, calendarEndDate, clientStartDate, clientEndDate);
+    if (clientStartDate < calendarStartDate || clientEndDate > calendarEndDate) {
+      return 'Client dates are outside the calendar semester dates.';
+    }
+
+    return null;
+  } catch (err) {
+    console.error('Error reading or parsing calendar.json:', err);
+    return 'Internal server error';
+  }
+}

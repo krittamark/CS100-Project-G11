@@ -1,157 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="assets/stylesheet/main.css">
-  <link rel="stylesheet" href="assets/stylesheet/activity.css">
-</head>
-<body>
-  <nav>
-    <div class="container">
-      <div class="nav-con">
-        <ul class="menu">
-          <li><a href="activity.html">Our Activiity</a></li>
-          <li><a href="index.html">Our Sponsor</a></li>
-          <li><a href="index.html">Our Team</a></li>
-        </ul>
-        <div class="logo">
-          <a href="index.html">
-            <img src="assets/images/logo/Passport-Landscape.svg" alt="Passport Logo">
-          </a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/stylesheet/main.css" />
+    <link rel="stylesheet" href="assets/stylesheet/activity.css" />
+  </head>
+
+  <body>
+    <nav>
+      <div class="container">
+        <div class="nav-con">
+          <ul class="menu">
+            <li><a href="activity.html">Our Activiity</a></li>
+            <li><a href="index.html">Our Sponsor</a></li>
+            <li><a href="index.html">Our Team</a></li>
+          </ul>
+          <div class="logo">
+            <a href="index.html">
+              <img
+                src="assets/images/logo/Passport-Landscape.svg"
+                alt="Passport Logo"
+              />
+            </a>
+          </div>
+          <div class="search-container">
+            <form action="#">
+              <input type="text" placeholder="Search.." name="search" />
+              <button type="submit"><i class="fa-fa-search"></i></button>
+            </form>
+          </div>
         </div>
-        <div class="search-container">
-          <form action="#">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa-fa-search"></i></button>
-          </form>
+      </div>
+    </nav>
+    <section id="head">
+      <div class="container-form">
+        <div class="con-activity">
+          <h2>Our Activity</h2>
+        </div>
+        <div class="con-form">
+          <a href="form.html">Create Form</a>
         </div>
       </div>
-  </nav>
-  <section id="head">
-    <div class="container-form">
-      <div class="con-activity">
-        <h2>Our Activity</h2>
-      </div>
-      <div class="con-form">
-        <a href="form.html">Create Form</a>
-      </div>
-    </div>
-  </section>
+    </section>
+    <dialog class="form__dialog" open>
+      <form id="form" action="#" method="post">
+        <div class="form__group">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          />
+          <span class="form__errorMsg" id="nameError"></span>
+        </div>
 
-   <div class="form-container">
-    <h1>CSTU Passport</h1>
-    <!-- Main Form -->
-    <form id="myForm" action="#" method="post">
-      <!-- Firstname and Lastname Field -->
-      <div class="form-group">
-        <label for="fullname">Firstname and Lastname</label>
-        <input type="text" id="fullname" name="fullname" />
-        <small>Only enter your first name and last name, middle name is not necessary.</small>
-        <span id="fullnameError" class="error"></span>
-      </div>
+        <div class="form__group">
+          <label for="studentID">Student ID</label>
+          <input
+            type="text"
+            id="studentID"
+            name="studentID"
+            placeholder="Student ID Ex. 6609554412"
+            required
+          />
+          <span class="form__errorMsg" id="studentIDError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter @dome email"
+            required
+          />
+          <span class="form__errorMsg" id="emailError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="workTitle">Work/Activity Title</label>
+          <input
+            type="text"
+            id="workTitle"
+            name="workTitle"
+            placeholder="Work/Activity Name"
+            required
+          />
+          <span class="form__errorMsg" id="workTitleError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="activityType">Type of Work/Activity</label>
+          <select id="activityType" name="activityType" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="1">Course</option>
+            <option value="2">Activity</option>
+            <option value="3">Work</option>
+            <option value="4">Research</option>
+            <option value="5">Sports</option>
+            <option value="6">Competition</option>
+            <option value="7">Computer Science</option>
+          </select>
+          <span class="form__errorMsg" id="activityTypeError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="academicYear">Academic Year</label>
+          <select id="academicYear" name="academicYear" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="2018">2561</option>
+            <option value="2019">2562</option>
+            <option value="2020">2563</option>
+            <option value="2021">2564</option>
+            <option value="2022">2565</option>
+            <option value="2023">2566</option>
+            <option value="2024">2567</option>
+            <option value="2025">2568</option>
+            <option value="2026">2569</option>
+          </select>
+          <span class="form__errorMsg" id="academicYearError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="semester">Semester</label>
+          <select id="semester" name="semester" required>
+            <option value="" disabled selected>Select an option</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">Summer</option>
+          </select>
+          <span class="form__errorMsg" id="semesterError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="startDate">Start Date/Time</label>
+          <input
+            type="datetime-local"
+            id="startDate"
+            name="startDate"
+            required
+          />
+          <span class="form__errorMsg" id="startDateError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="endDate">End Date/Time</label>
+          <input type="datetime-local" id="endDate" name="endDate" required />
+          <span class="form__errorMsg" id="endDateError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="location">Location</label>
+          <input
+            type="text"
+            id="location"
+            name="location"
+            placeholder="Work/Activity Location"
+            required
+          />
+          <span class="form__errorMsg" id="locationError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="description">Description</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Work/Activity Description"
+            required
+          ></textarea>
+          <span class="form__errorMsg" id="descriptionError"></span>
+        </div>
+
+        <div class="form__group">
+          <label for="file">Image</label>
+          <input type="file" id="file" name="file" required />
+          <span class="form__errorMsg" id="fileError"></span>
+        </div>
+
+        <div class="form__group">
+          <button type="submit" id="submit">Submit</button>
+        </div>
+      </form>
+    </dialog>
+  </body>
+
+  <script>
+    document.getElementById("name").addEventListener("input", (event) => {
+      names = event.target.value.trim().split(" ");
+      if (names.length < 2) {
+        document.getElementById("nameError").innerText =
+          "Please enter your first and last name.";
+      } else {
+        document.getElementById("nameError").innerText = "";
+      }
+    });
+
+    document.getElementById("studentID").addEventListener("input", (event) => {
+      if (event.target.value.length != 10) {
+        document.getElementById("studentIDError").innerText =
+          "Please enter your 10 digit student ID.";
+      } else {
+        document.getElementById("studentIDError").innerText = "";
+      }
+    });
+
+    document.getElementById("email").addEventListener("input", (event) => {
+      if (!event.target.value.endsWith("@dome.tu.ac.th")) {
+        document.getElementById("emailError").innerText =
+          "Please enter your university email in the format 'xxx@dome.ac.th'";
+      } else {
+        document.getElementById("emailError").innerText = "";
+      }
+    });
+
+  document.getElementById("workTitle").addEventListener("input", (event) => {
+      if (event.target.value.length < 5) {
+        document.getElementById("workTitleError").innerText =
+          "Please enter a work/activity title with at least 5 characters.";
+      } else {
+        document.getElementById("workTitleError").innerText = "";
+      }
+    });
+
+    document.getElementById("startDate").addEventListener("input", (event) => {
+      if (event.target.value == "") {
+        document.getElementById("startDateError").innerText =
+          "Please select a start date/time.";
+
+        if (
+          document.getElementById("startDate").value >
+          document.getElementById("endDate").value
+        ) {
+          document.getElementById("startDateError").innerText =
+            "Please select a start date/time that is before the end date/time.";
+        }
+      } else {
+        document.getElementById("startDateError").innerText = "";
+      }
+    });
+
+    document.getElementById("endDate").addEventListener("input", (event) => {
+      if (event.target.value == "") {
+        document.getElementById("endDateError").innerText =
+          "Please select an end date/time.";
+
+        if (
+          document.getElementById("startDate").value >
+          document.getElementById("endDate").value
+        ) {
+          document.getElementById("endDateError").innerText =
+            "Please select an end date/time that is after the start date/time.";
+        }
+      } else {
+        document.getElementById("endDateError").innerText = "";
+      }
+    });
+
+    document.getElementById("location").addEventListener("input", (event) => {
+      if (event.target.value.length < 5) {
+        document.getElementById("locationError").innerText =
+          "Please enter a location with at least 5 characters.";
+      } else {
+        document.getElementById("locationError").innerText = "";
+      }
+    });
+
+    document.getElementById("description").addEventListener("input", (event) => {
+      if (event.target.value.length < 5) {
+        document.getElementById("descriptionError").innerText =
+          "Please enter a description with at least 5 characters.";
+      } else {
+        document.getElementById("descriptionError").innerText = "";
+      }
+    });
+
+    document.getElementById("file").addEventListener("input", (event) => {
+      if (event.target.value == "") {
+        document.getElementById("fileError").innerText =
+          "Please select an image.";
+      } else {
+        document.getElementById("fileError").innerText = "";
+      }
+    });
+
+    document.getElementById("form").addEventListener("submit", async (event) => {
+      event.preventDefault();
+
+      let formData = new FormData(event.target);
+
+      try {
+        let response = await fetch("http://localhost:5001/passport", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(Object.fromEntries(formData)),
+        });
+
+        let result = await response.json();
+
+        if (result.status == "success") {
+          alert("Activity created successfully.");
+          window.location.href = "activity.html";
+        } else {
+          alert("Activity creation failed.");
+        }
+      } catch (error) {
+        alert("Activity creation failed.");
+      }
       
-      <!-- Student ID Field -->
-      <div class="form-group">
-        <label for="studentID">Student ID</label>
-        <input type="text" id="studentID" name="studentID" />
-        <small>Please enter your 10-digit student ID.</small>
-        <span id="studentIDError" class="error"></span>
-      </div>
-      
-      <!-- University Email Field -->
-      <div class="form-group">
-        <label for="email">University Email</label>
-        <input type="email" id="email" name="email" />
-        <small>Please provide your university email in the format "xxx.yyy@dome.tu.ac.th".</small>
-        <span id="emailError" class="error"></span>
-      </div>
-
-      <!-- Work/Activity Title Field -->
-      <div class="form-group">
-        <label for="workTitle">Work/Activity Title</label>
-        <input type="text" id="workTitle" name="workTitle" />
-      </div>
-
-      <!-- Type of Work/Activity Field -->
-      <div class="form-group">
-        <label for="activityType">Type of Work/Activity</label>
-        <select id="activityType" name="activityType">
-          <option value="" disabled selected>Select an option</option>
-        </select>
-      </div>
-      <!-- <div class="form-group">
-        <label for="activityType">Type of Work/Activity</label>
-        <select id="activityType" name="activityType">
-          <option value="" disabled selected>Select an option</option>
-          <option value="Course">Course</option>
-          <option value="Activity">Activity</option>
-          <option value="Work">Work</option>
-          <option value="Research">Research</option>
-          <option value="Sports">Sports</option>
-          <option value="Competition">Competition</option>
-          <option value="Computer Science">Computer Science</option>
-        </select>
-      </div> 
-
-      <!-- Academic Year Field -->
-      <div class="form-group">
-        <label for="academicYear">Academic Year</label>
-        <select id="academicYear" name="academicYear">
-          <option value="" disabled selected>Select an option</option>
-          <option value="2561">2561</option>
-          <option value="2562">2562</option>
-          <option value="2563">2563</option>
-          <option value="2564">2564</option>
-          <option value="2565">2565</option>
-          <option value="2566">2566</option>
-          <option value="2567">2567</option>
-          <option value="2568">2568</option>
-          <option value="2569">2569</option>
-        </select>
-      </div>
-
-      <!-- Semester Field -->
-      <div class="form-group">
-        <label for="semester">Semester</label>
-        <select id="semester" name="semester">
-          <option value="" disabled selected>Select an option</option>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="Summer">Summer</option>
-        </select>
-      </div>
-
-      <!-- Start Date/Time Field -->
-      <div class="form-group">
-        <label for="startDate">Start Date/Time</label>
-        <input type="datetime-local" id="startDate" name="startDate" />
-      </div>
-
-      <!-- End Date/Time Field -->
-      <div class="form-group">
-        <label for="endDate">End Date/Time</label>
-        <input type="datetime-local" id="endDate" name="endDate" />
-      </div>
-
-      <!-- Location Field -->
-      <div class="form-group">
-        <label for="location">Location</label>
-        <input type="text" id="location" name="location" />
-      </div>
-
-      <!-- Description Field -->
-      <div class="form-group">
-        <label for="description">Description</label>
-        <textarea id="description" name="description" rows="4"></textarea>
-      </div>
-
-      <!-- Submit Button -->
-      <div class="form-group">
-        <input type="submit" value="Submit" />
-      </div>
-    </form>
-  </div>
-</body>
+    });
+  </script>
 </html>

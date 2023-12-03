@@ -1,16 +1,40 @@
 [
   {
-    "first_name": "CSTU",
-    "last_name": "TA100",
-    "student_id": 123456,
+    "name": "Example Student",
+    "studentID": 123456,
     "email": "ta100@cstu.com",
-    "title": "CSTU TA100",
-    "type_of_work_id": 1,
-    "academic_year": 2023,
+    "workTitle": "CSTU TA100",
+    "activityType": 1,
+    "academicYear": 2023,
     "semester": 1,
-    "start_date": "2023-08-15T12:00:00Z",
-    "end_date": "2023-08-16T12:00:00Z",
+    "startDate": "2023-08-15T12:00:00Z",
+    "endDate": "2023-08-16T12:00:00Z",
     "location": "Example Location",
-    "description": "Example Description"
+    "description": "Example Description",
+    "file": "https://example.com/example.pdf"
+  },
+  {
+    "name": "Krittamet Damthongkam",
+    "studentID": "6609490062",
+    "email": "krittamet.dam@dome.tu.ac.th",
+    "activityType": "2",
+    "academicYear": "2023",
+    "semester": "1",
+    "startDate": "2023-12-03T19:25",
+    "endDate": "2023-12-04T19:25",
+    "location": "LC222",
+    "description": "LC@@@@@"
+  },
+  {
+    "name": "Krittamet Damthongkam",
+    "studentID": "6609490062",
+    "email": "krittamet.dam@dome.tu.ac.th",
+    "activityType": "2",
+    "academicYear": "2023",
+    "semester": "1",
+    "startDate": "2023-12-03T19:25",
+    "endDate": "2023-12-04T19:25",
+    "location": "LC222",
+    "description": "LC@@@@@"
   }
 ]
