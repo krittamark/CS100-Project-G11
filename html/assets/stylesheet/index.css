@@ -1,3 +1,23 @@
 @import url(./indexHead.css);
 @import url(./indexSponsor.css);
 @import url(./indexTeam.css);
+
+@media (min-width: 1025px) {
+  .content__section#head .content__wrapper {
+    width: 50%;
+  }
+  .content__section#sponsor {
+    width: 50%;
+    float: left;
+  }
+  .content__section#team {
+    width: 50%;
+  }
+  .sponsor__item {
+    width: 350px;
+    height: 150px;
+  }
+  .sponsor__wrapper {
+    padding: 0 10%;
+  }
+}
