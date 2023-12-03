@@ -38,7 +38,7 @@ router.post('/passport', (req, res) => {
 
   // Check for mandatory fields in the incoming request
   if (!data.first_name || !data.last_name || !data.student_id || !data.email || !data.title ||
-    !data.type_of_work_id || !data.academic_year || !data.semester || !data.start_date || !data.end_date || !data.location || !data.description) {
+    !data.type_of_work_id || !data.academic_year || !data.semester || !data.start_date || !data.end_date || !data.location || !data.description || !req.files) {
     return res.status(400).send({
       success: false,
       code: 400,
@@ -81,17 +81,29 @@ router.post('/passport', (req, res) => {
     records = JSON.parse(jsonData);
   } catch (err) {
 
-    
+
   }
 
   records.push(record);
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
+  let imagefile = req.files.activityImage;
+  imagefile.mv(`../html/assets/images/activities/${data.workTitle}.jpg`, (err) => {
+    if (err) {
+      console.log(err);
+      return res.status(500).send({
+        success: false,
+        code: 500,
+        message: 'Internal server error',
+        data: null
+      });
+    }
+  });
   res.status(200).json({
-      success: true,
-      code: 200,
-      message: 'Record added successfully!',
-      data: record
-    });
+    success: true,
+    code: 200,
+    message: 'Record added successfully!',
+    data: record
+  });
 });
 
 module.exports = router;
