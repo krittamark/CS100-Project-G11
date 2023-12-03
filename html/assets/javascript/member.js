@@ -68,7 +68,6 @@ const memberData = {
 };
 
 function handleClick(memberName) {
-  console.log(memberName);
   ['markmark', 'kaning', 'nun'].forEach((member) => {
     document.getElementById(`memberImage-${member}`).classList.remove('active');
   });
