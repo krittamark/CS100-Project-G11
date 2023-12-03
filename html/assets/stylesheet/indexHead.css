@@ -96,6 +96,7 @@
 @media (min-width: 600px) {
   .content__section#head {
     justify-content: start;
+    min-height: 30vh;
   }
   .content__section#head .content__wrapper {
     padding: 0 10%;
