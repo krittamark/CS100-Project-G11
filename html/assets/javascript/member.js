@@ -18,6 +18,10 @@ const memberData = {
       {
         "name": "X",
         "url": "https://x.com/krittamark"
+      },
+      {
+        "name": "Github",
+        "url": "https://github.com/krittamark"
       }
     ]
   },
@@ -27,7 +31,7 @@ const memberData = {
     "sid": "6609520090",
     "dept": "Computer Science, Faculty of Science and Technology",
     "image": "assets/images/member/kaning.webp",
-    "description": "",
+    "description": "She like to listen to music or watching videos on Youtube in her free time. She likes to play badminton but she is not good at it. She likes to go out with her friends. She is a person who look introverted but she is not. Fell free to make a conversation with her.",
     "socials": [
       {
         "name": "Instagram",
@@ -36,6 +40,10 @@ const memberData = {
       {
         "name": "facebook",
         "url": "https://www.facebook.com/jiraporn.jaiyasuk"
+      },
+      {
+        "name": "Github",
+        "url": "https://github.com/Jiraporn-Jaiyasuk"
       }
     ]
   },
@@ -50,6 +58,10 @@ const memberData = {
       {
         "name": "Instagram",
         "url": "https://www.instagram.com/nun.nattanun/"
+      },
+      {
+        "name": "Github",
+        "url": "https://github.com/Nattanan-Doangjinda"
       }
     ]
   }
@@ -81,7 +93,7 @@ function createSocialElement(social) {
   socialElement.target = '_blank';
 
   const socialImage = document.createElement('img');
-  socialImage.src = `assets/images/logo/${social.name.toLowerCase()}.svg`;
+  socialImage.src = `assets/images/logo/social/${social.name.toLowerCase()}.svg`;
   socialImage.alt = `${social.name} Logo`;
   socialImage.classList.add('member__socialImage');
 
