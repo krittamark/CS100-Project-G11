@@ -3,37 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <title>Document</title>
+    <title>Our Acitivity</title>
     <link rel="stylesheet" href="assets/stylesheet/activity.css" />
     <link rel="stylesheet" href="assets/stylesheet/main.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
 
-  <body>
-    <nav>
-      <div class="container">
-        <div class="nav-con">
-          <ul class="menu">
-            <li><a href="activity.html">Our Activiity</a></li>
-            <li><a href="index.html">Our Sponsor</a></li>
-            <li><a href="index.html">Our Team</a></li>
-          </ul>
-          <div class="logo">
-            <a href="index.html">
-              <img
-                src="assets/images/logo/Passport-Landscape.svg"
-                alt="Passport Logo"
-              />
-            </a>
-          </div>
-          <div class="search-container">
-            <form action="#">
-              <input type="text" placeholder="Search.." name="search" />
-              <button type="submit"><i class="fa-fa-search"></i></button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </nav>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">
+      <img src="assets/images/logo/Passport-Landscape.svg" alt="" class="logo">
+    </a>
+    <a href="index.html">Home</a>
+    <a href="#Our Sponsor">Our Sponsor</a>
+    <a href="#Our Team">Our Team</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
 
 
     <section class="content__section" id="activity">
@@ -468,4 +454,14 @@
         }
       });
   </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+    </script>
 </html>
