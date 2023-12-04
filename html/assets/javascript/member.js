@@ -53,7 +53,7 @@ const memberData = {
     "sid": "6609611923",
     "dept": "Computer Science, Faculty of Science and Technology",
     "image": "assets/images/member/nun.webp",
-    "description": "",
+    "description": "NUNINW who likes to exercise and swimming",
     "socials": [
       {
         "name": "Instagram",
