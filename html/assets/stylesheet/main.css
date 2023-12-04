@@ -193,11 +193,6 @@ body {
   transition: 0.2s ease-in-out;
 }
 
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
 .topnav .icon {
   display: none;
 }
