@@ -1,406 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
-    <title>Our Acitivity</title>
-    <link rel="stylesheet" href="assets/stylesheet/activity.css" />
-    <link rel="stylesheet" href="assets/stylesheet/main.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
+  <title>Our Activity | G11 Our Passport</title>
+  <link rel="stylesheet" href="assets/stylesheet/activity.css" />
+  <link rel="stylesheet" href="assets/stylesheet/main.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
   <div class="topnav" id="myTopnav">
     <a href="index.html">
-      <img src="assets/images/logo/Passport-Landscape.svg" alt="" class="logo">
+      <img src="assets/images/logo/Passport-Landscape.svg" alt="" class="logo" />
     </a>
     <a href="index.html">Home</a>
-      <a href="index.html#sponsor">Our Sponsor</a>
-      <a href="index.html#team">Our Team</a>
+    <a href="index.html#sponsor">Our Sponsor</a>
+    <a href="index.html#team">Our Team</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
   </div>
 
+  <section class="content__section" id="activity">
+    <div class="contentTitle__wrapper">
+      <h2 class="contentTitle__text">Our Activities</h2>
+      <button class="button button-primary" onclick="activityDialog.showModal()">
+        Create activity
+      </button>
+    </div>
+    <div class="activity__wrapper"></div>
+  </section>
 
-    <section class="content__section" id="activity">
-      <div class="contentTitle__wrapper">
-        <h2 class="contentTitle__text">Our Activities</h2>
-        <button class="button button-primary" onclick="activityDialog.showModal()">Create activity</button>
+  <dialog id="activityDialog" class="form__dialog">
+    <form id="form" action="#" method="post">
+      <div class="form__group">
+        <h2 class="form__title">Create Activity</h2>
       </div>
-      <div class="activity__wrapper"></div>
-    </section>
+      <div class="form__group">
+        <label for="name">Name</label>
+        <input class="form__input" type="text" id="name" name="name" placeholder="Enter your name" required />
+        <span class="form__errorMsg" id="nameError"></span>
+      </div>
 
-    <script></script>
+      <div class="form__group">
+        <label for="studentID">Student ID</label>
+        <input class="form__input" type="text" id="studentID" name="studentID" placeholder="Student ID Ex. 6609554412"
+          required />
+        <span class="form__errorMsg" id="studentIDError"></span>
+      </div>
 
+      <div class="form__group">
+        <label for="email">Email</label>
+        <input class="form__input" type="email" id="email" name="email" placeholder="Enter @dome email" required />
+        <span class="form__errorMsg" id="emailError"></span>
+      </div>
 
-    <dialog id="activityDialog" class="form__dialog">
-      <form id="form" action="#" method="post">
-        <div class="form__group">
-          <h2 class="form__title">Create Activity</h2>
-        </div>
-        <div class="form__group">
-          <label for="name">Name</label>
-          <input
-            class="form__input"
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-          <span class="form__errorMsg" id="nameError"></span>
-        </div>
+      <div class="form__group">
+        <label for="workTitle">Work/Activity Title</label>
+        <input class="form__input" type="text" id="workTitle" name="workTitle" placeholder="Work/Activity Name"
+          required />
+        <span class="form__errorMsg" id="workTitleError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="studentID">Student ID</label>
-          <input
-            class="form__input"
-            type="text"
-            id="studentID"
-            name="studentID"
-            placeholder="Student ID Ex. 6609554412"
-            required
-          />
-          <span class="form__errorMsg" id="studentIDError"></span>
-        </div>
+      <div class="form__group">
+        <label for="activityType">Type of Work/Activity</label>
+        <select id="activityType" name="activityType" required class="form__input">
+          <option value="" disabled selected>Select an option</option>
+          <option value="1">Course</option>
+          <option value="2">Activity</option>
+          <option value="3">Work</option>
+          <option value="4">Research</option>
+          <option value="5">Sports</option>
+          <option value="6">Competition</option>
+          <option value="7">Computer Science</option>
+        </select>
+        <span class="form__errorMsg" id="activityTypeError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="email">Email</label>
-          <input
-            class="form__input"
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter @dome email"
-            required
-          />
-          <span class="form__errorMsg" id="emailError"></span>
-        </div>
+      <div class="form__group">
+        <label for="academicYear">Academic Year</label>
+        <select id="academicYear" name="academicYear" required class="form__input">
+          <option value="" disabled selected>Select an option</option>
+          <option value="2018">2561</option>
+          <option value="2019">2562</option>
+          <option value="2020">2563</option>
+          <option value="2021">2564</option>
+          <option value="2022">2565</option>
+          <option value="2023">2566</option>
+          <option value="2024">2567</option>
+          <option value="2025">2568</option>
+          <option value="2026">2569</option>
+        </select>
+        <span class="form__errorMsg" id="academicYearError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="workTitle">Work/Activity Title</label>
-          <input
-            class="form__input"
-            type="text"
-            id="workTitle"
-            name="workTitle"
-            placeholder="Work/Activity Name"
-            required
-          />
-          <span class="form__errorMsg" id="workTitleError"></span>
-        </div>
+      <div class="form__group">
+        <label for="semester">Semester</label>
+        <select id="semester" name="semester" required class="form__input">
+          <option value="" disabled selected>Select an option</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">Summer</option>
+        </select>
+        <span class="form__errorMsg" id="semesterError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="activityType">Type of Work/Activity</label>
-          <select
-            id="activityType"
-            name="activityType"
-            required
-            class="form__input"
-          >
-            <option value="" disabled selected>Select an option</option>
-            <option value="1">Course</option>
-            <option value="2">Activity</option>
-            <option value="3">Work</option>
-            <option value="4">Research</option>
-            <option value="5">Sports</option>
-            <option value="6">Competition</option>
-            <option value="7">Computer Science</option>
-          </select>
-          <span class="form__errorMsg" id="activityTypeError"></span>
-        </div>
+      <div class="form__group">
+        <label for="startDate">Start Date/Time</label>
+        <input class="form__input" type="datetime-local" id="startDate" name="startDate" required />
+        <span class="form__errorMsg" id="startDateError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="academicYear">Academic Year</label>
-          <select
-            id="academicYear"
-            name="academicYear"
-            required
-            class="form__input"
-          >
-            <option value="" disabled selected>Select an option</option>
-            <option value="2018">2561</option>
-            <option value="2019">2562</option>
-            <option value="2020">2563</option>
-            <option value="2021">2564</option>
-            <option value="2022">2565</option>
-            <option value="2023">2566</option>
-            <option value="2024">2567</option>
-            <option value="2025">2568</option>
-            <option value="2026">2569</option>
-          </select>
-          <span class="form__errorMsg" id="academicYearError"></span>
-        </div>
+      <div class="form__group">
+        <label for="endDate">End Date/Time</label>
+        <input type="datetime-local" id="endDate" name="endDate" required class="form__input" />
+        <span class="form__errorMsg" id="endDateError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="semester">Semester</label>
-          <select id="semester" name="semester" required class="form__input">
-            <option value="" disabled selected>Select an option</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">Summer</option>
-          </select>
-          <span class="form__errorMsg" id="semesterError"></span>
-        </div>
+      <div class="form__group">
+        <label for="location">Location</label>
+        <input class="form__input" type="text" id="location" name="location" placeholder="Work/Activity Location"
+          required />
+        <span class="form__errorMsg" id="locationError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="startDate">Start Date/Time</label>
-          <input
-            class="form__input"
-            type="datetime-local"
-            id="startDate"
-            name="startDate"
-            required
-          />
-          <span class="form__errorMsg" id="startDateError"></span>
-        </div>
+      <div class="form__group">
+        <label for="description">Description</label>
+        <textarea class="form__input" id="description" name="description" placeholder="Work/Activity Description"
+          required></textarea>
+        <span class="form__errorMsg" id="descriptionError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="endDate">End Date/Time</label>
-          <input
-            type="datetime-local"
-            id="endDate"
-            name="endDate"
-            required
-            class="form__input"
-          />
-          <span class="form__errorMsg" id="endDateError"></span>
-        </div>
+      <div class="form__group">
+        <label for="activityImage">Image</label>
+        <input type="file" id="activityImage" name="activityImage" required class="form__input" accept="image/*" />
+        <span class="form__errorMsg" id="fileError"></span>
+      </div>
 
-        <div class="form__group">
-          <label for="location">Location</label>
-          <input
-            class="form__input"
-            type="text"
-            id="location"
-            name="location"
-            placeholder="Work/Activity Location"
-            required
-          />
-          <span class="form__errorMsg" id="locationError"></span>
-        </div>
+      <div class="form__group">
+        <button class="form__input form__submit" type="submit" id="submit">
+          Submit
+        </button>
+      </div>
+    </form>
+  </dialog>
+</body>
 
-        <div class="form__group">
-          <label for="description">Description</label>
-          <textarea
-            class="form__input"
-            id="description"
-            name="description"
-            placeholder="Work/Activity Description"
-            required
-          ></textarea>
-          <span class="form__errorMsg" id="descriptionError"></span>
-        </div>
+<script>
+  function createActivityElement(data) {
+    const activityElement = document.createElement("div");
+    activityElement.classList.add("activity__item");
 
-        <div class="form__group">
-          <label for="activityImage">Image</label>
-          <input
-            type="file"
-            id="activityImage"
-            name="activityImage"
-            required
-            class="form__input"
-          />
-          <span class="form__errorMsg" id="fileError"></span>
-        </div>
+    const activityImageWrapper = document.createElement("div");
+    activityImageWrapper.classList.add("activityImage__wrapper");
 
-        <div class="form__group">
-          <button class="form__input form__submit" type="submit" id="submit">
-            Submit
-          </button>
-        </div>
-      </form>
-    </dialog>
-  </body>
+    const activityImage = document.createElement("img");
+    activityImage.classList.add("activityImage__image");
+    activityImage.src = data.activityImage;
+    activityImage.alt = "Activity Image";
 
-  <script>
-    function createActivityElement(data) {
-      const activityElement = document.createElement("div");
-      activityElement.classList.add("activity__item");
+    const activityImageGradient = document.createElement("div");
+    activityImageGradient.classList.add("activityImage__gradient");
 
-      const activityImageWrapper = document.createElement("div");
-      activityImageWrapper.classList.add("activityImage__wrapper");
+    const activityDescription = document.createElement("span");
+    activityDescription.classList.add("activity__description");
+    activityDescription.innerText = data.description;
 
-      const activityImage = document.createElement("img");
-      activityImage.classList.add("activityImage__image");
-      activityImage.src = data.activityImage;
-      activityImage.alt = "Activity Image";
+    activityImageGradient.appendChild(activityDescription);
+    activityImageWrapper.appendChild(activityImage);
+    activityImageWrapper.appendChild(activityImageGradient);
 
-      const activityImageGradient = document.createElement("div");
-      activityImageGradient.classList.add("activityImage__gradient");
+    const activityContentWrapper = document.createElement("div");
+    activityContentWrapper.classList.add("activityContent__wrapper");
 
-      const activityDescription = document.createElement("span");
-      activityDescription.classList.add("activity__description");
-      activityDescription.innerText = data.description;
+    const activityTitle = document.createElement("span");
+    activityTitle.classList.add("activity__title");
+    activityTitle.innerText = data.workTitle;
 
-      activityImageGradient.appendChild(activityDescription);
-      activityImageWrapper.appendChild(activityImage);
-      activityImageWrapper.appendChild(activityImageGradient);
+    const activityLocationIcon = document.createElement("i");
+    activityLocationIcon.classList.add("icon", "icon-pin");
 
-      const activityContentWrapper = document.createElement("div");
-      activityContentWrapper.classList.add("activityContent__wrapper");
+    const activityLocation = document.createElement("span");
+    activityLocation.classList.add("activity__location");
+    activityLocation.innerText = data.location;
 
-      const activityTitle = document.createElement("span");
-      activityTitle.classList.add("activity__title");
-      activityTitle.innerText = data.workTitle;
+    activityContentWrapper.appendChild(activityTitle);
+    activityContentWrapper.appendChild(activityLocationIcon);
+    activityContentWrapper.appendChild(activityLocation);
 
-      const activityLocationIcon = document.createElement("i");
-      activityLocationIcon.classList.add("icon", "icon-pin");
+    activityElement.appendChild(activityImageWrapper);
+    activityElement.appendChild(activityContentWrapper);
 
-      const activityLocation = document.createElement("span");
-      activityLocation.classList.add("activity__location");
-      activityLocation.innerText = data.location;
-
-      activityContentWrapper.appendChild(activityTitle);
-      activityContentWrapper.appendChild(activityLocationIcon);
-      activityContentWrapper.appendChild(activityLocation);
-
-      activityElement.appendChild(activityImageWrapper);
-      activityElement.appendChild(activityContentWrapper);
-
-      return activityElement;
-    }
+    return activityElement;
+  }
 
     document.addEventListener('DOMContentLoaded', async () => {
-      //request data from server
-      try {
+    //request data from server
+    try {
         const response = await fetch("http://localhost:5001/passport");
-        if (response.ok) {
-          const result = await response.json();
-          result.forEach((data) => {
-            const activityElement = createActivityElement(data);
+      if (response.ok) {
+        const result = await response.json();
+        result.forEach((data) => {
+          const activityElement = createActivityElement(data);
             document.querySelector(".activity__wrapper").appendChild(activityElement);
-          });
-        }
-      } catch (error) {
-        console.error(error);
+        });
       }
+    } catch (error) {
+      console.error(error);
+    }
       
-    });
-  </script>
+  });
+</script>
 
-  <script>
-    const activityDialog = document.getElementById("activityDialog");
-    activityDialog.addEventListener("click", (event) => {
-      const rect = activityDialog.getBoundingClientRect();
+<script>
+  const activityDialog = document.getElementById("activityDialog");
+  activityDialog.addEventListener("click", (event) => {
+    const rect = activityDialog.getBoundingClientRect();
+    if (
+      event.clientY < rect.top ||
+      event.clientY > rect.bottom ||
+      event.clientX < rect.left ||
+      event.clientX > rect.right
+    ) {
+      activityDialog.close();
+    }
+  });
+</script>
+<script>
+  document.getElementById("name").addEventListener("input", (event) => {
+    names = event.target.value.trim().split(" ");
+    if (names.length < 2) {
+      document.getElementById("nameError").innerText =
+        "Please enter your first and last name.";
+      document.getElementById("name").classList.add("error");
+    } else {
+      document.getElementById("nameError").innerText = "";
+      document.getElementById("name").classList.remove("error");
+    }
+  });
+
+  document.getElementById("studentID").addEventListener("input", (event) => {
+    if (event.target.value.length != 10) {
+      document.getElementById("studentIDError").innerText =
+        "Please enter your 10 digit student ID.";
+      document.getElementById("studentID").classList.add("error");
+    } else {
+      document.getElementById("studentIDError").innerText = "";
+      document.getElementById("studentID").classList.remove("error");
+    }
+  });
+
+  document.getElementById("email").addEventListener("input", (event) => {
+    if (!event.target.value.endsWith("@dome.tu.ac.th")) {
+      document.getElementById("emailError").innerText =
+        "Please enter your university email in the format 'xxx@dome.ac.th'";
+      document.getElementById("email").classList.add("error");
+    } else {
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("email").classList.remove("error");
+    }
+  });
+
+  document.getElementById("workTitle").addEventListener("input", (event) => {
+    if (event.target.value.length < 5) {
+      document.getElementById("workTitleError").innerText =
+        "Please enter a work/activity title with at least 5 characters.";
+      document.getElementById("workTitle").classList.add("error");
+    } else {
+      document.getElementById("workTitleError").innerText = "";
+      document.getElementById("workTitle").classList.remove("error");
+    }
+  });
+
+  document.getElementById("startDate").addEventListener("input", (event) => {
+    if (event.target.value == "") {
+      document.getElementById("startDateError").innerText =
+        "Please select a start date/time.";
+      document.getElementById("endDate").classList.add("error");
+
       if (
-        event.clientY < rect.top ||
-        event.clientY > rect.bottom ||
-        event.clientX < rect.left ||
-        event.clientX > rect.right
+        document.getElementById("startDate").value >
+        document.getElementById("endDate").value
       ) {
-        activityDialog.close();
-      }
-    });
-  </script>
-  <script>
-    document.getElementById("name").addEventListener("input", (event) => {
-      names = event.target.value.trim().split(" ");
-      if (names.length < 2) {
-        document.getElementById("nameError").innerText =
-          "Please enter your first and last name.";
-        document.getElementById("name").classList.add("error");
-      } else {
-        document.getElementById("nameError").innerText = "";
-        document.getElementById("name").classList.remove("error");
-      }
-    });
-
-    document.getElementById("studentID").addEventListener("input", (event) => {
-      if (event.target.value.length != 10) {
-        document.getElementById("studentIDError").innerText =
-          "Please enter your 10 digit student ID.";
-        document.getElementById("studentID").classList.add("error");
-      } else {
-        document.getElementById("studentIDError").innerText = "";
-        document.getElementById("studentID").classList.remove("error");
-      }
-    });
-
-    document.getElementById("email").addEventListener("input", (event) => {
-      if (!event.target.value.endsWith("@dome.tu.ac.th")) {
-        document.getElementById("emailError").innerText =
-          "Please enter your university email in the format 'xxx@dome.ac.th'";
-        document.getElementById("email").classList.add("error");
-      } else {
-        document.getElementById("emailError").innerText = "";
-        document.getElementById("email").classList.remove("error");
-      }
-    });
-
-    document.getElementById("workTitle").addEventListener("input", (event) => {
-      if (event.target.value.length < 5) {
-        document.getElementById("workTitleError").innerText =
-          "Please enter a work/activity title with at least 5 characters.";
-        document.getElementById("workTitle").classList.add("error");
-      } else {
-        document.getElementById("workTitleError").innerText = "";
-        document.getElementById("workTitle").classList.remove("error");
-      }
-    });
-
-    document.getElementById("startDate").addEventListener("input", (event) => {
-      if (event.target.value == "") {
         document.getElementById("startDateError").innerText =
-          "Please select a start date/time.";
+          "Please select a start date/time that is before the end date/time.";
         document.getElementById("endDate").classList.add("error");
-
-        if (
-          document.getElementById("startDate").value >
-          document.getElementById("endDate").value
-        ) {
-          document.getElementById("startDateError").innerText =
-            "Please select a start date/time that is before the end date/time.";
-          document.getElementById("endDate").classList.add("error");
-        }
-      } else {
-        document.getElementById("startDateError").innerText = "";
-        document.getElementById("endDate").classList.remove("error");
       }
-    });
+    } else {
+      document.getElementById("startDateError").innerText = "";
+      document.getElementById("endDate").classList.remove("error");
+    }
+  });
 
-    document.getElementById("endDate").addEventListener("input", (event) => {
-      if (event.target.value == "") {
+  document.getElementById("endDate").addEventListener("input", (event) => {
+    if (event.target.value == "") {
+      document.getElementById("endDateError").innerText =
+        "Please select an end date/time.";
+      document.getElementById("startDate").classList.add("error");
+      if (
+        document.getElementById("startDate").value >
+        document.getElementById("endDate").value
+      ) {
         document.getElementById("endDateError").innerText =
-          "Please select an end date/time.";
+          "Please select an end date/time that is after the start date/time.";
         document.getElementById("startDate").classList.add("error");
-        if (
-          document.getElementById("startDate").value >
-          document.getElementById("endDate").value
-        ) {
-          document.getElementById("endDateError").innerText =
-            "Please select an end date/time that is after the start date/time.";
-          document.getElementById("startDate").classList.add("error");
-        }
-      } else {
-        document.getElementById("endDateError").innerText = "";
-        document.getElementById("startDate").classList.remove("error");
       }
-    });
+    } else {
+      document.getElementById("endDateError").innerText = "";
+      document.getElementById("startDate").classList.remove("error");
+    }
+  });
 
-    document.getElementById("location").addEventListener("input", (event) => {
+  document.getElementById("location").addEventListener("input", (event) => {
+    if (event.target.value.length < 5) {
+      document.getElementById("locationError").innerText =
+        "Please enter a location with at least 5 characters.";
+      document.getElementById("location").classList.add("error");
+    } else {
+      document.getElementById("locationError").innerText = "";
+      document.getElementById("location").classList.remove("error");
+    }
+  });
+
+  document
+    .getElementById("description")
+    .addEventListener("input", (event) => {
       if (event.target.value.length < 5) {
-        document.getElementById("locationError").innerText =
-          "Please enter a location with at least 5 characters.";
-        document.getElementById("location").classList.add("error");
+        document.getElementById("descriptionError").innerText =
+          "Please enter a description with at least 5 characters.";
+        document.getElementById("description").classList.add("error");
       } else {
-        document.getElementById("locationError").innerText = "";
-        document.getElementById("location").classList.remove("error");
+        document.getElementById("descriptionError").innerText = "";
+        document.getElementById("description").classList.remove("error");
       }
     });
-
-    document
-      .getElementById("description")
-      .addEventListener("input", (event) => {
-        if (event.target.value.length < 5) {
-          document.getElementById("descriptionError").innerText =
-            "Please enter a description with at least 5 characters.";
-          document.getElementById("description").classList.add("error");
-        } else {
-          document.getElementById("descriptionError").innerText = "";
-          document.getElementById("description").classList.remove("error");
-        }
-      });
 
     document.getElementById("activityImage").addEventListener("input", (event) => {
       if (event.target.value == "") {
@@ -411,10 +346,10 @@
       }
     });
 
-    document
-      .getElementById("form")
-      .addEventListener("submit", async (event) => {
-        event.preventDefault();
+  document
+    .getElementById("form")
+    .addEventListener("submit", async (event) => {
+      event.preventDefault();
 
         const formData = new FormData();
         
@@ -434,34 +369,34 @@
 
         try {
           let response = await fetch("http://localhost:5001/passport", {
-            method: "POST",
-            headers: {
+          method: "POST",
+          headers: {
               "Content-Type": "application/x-www-form-urlencoded",
-            },
+          },
             body: JSON.stringify(formData),
-          });
+        });
 
-          let result = await response.json();
+        let result = await response.json();
 
-          if (result.status == "success") {
-            alert("Activity created successfully.");
-            window.location.href = "activity.html";
-          } else {
-            alert("Activity creation failed.");
-          }
-        } catch (error) {
+        if (result.status == "success") {
+          alert("Activity created successfully.");
+          window.location.href = "activity.html";
+        } else {
           alert("Activity creation failed.");
         }
-      });
-  </script>
-  <script>
-    function myFunction() {
-      var x = document.getElementById("myTopnav");
-      if (x.className === "topnav") {
-        x.className += " responsive";
-      } else {
-        x.className = "topnav";
+      } catch (error) {
+        alert("Activity creation failed.");
       }
+    });
+</script>
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
     }
-    </script>
+  }
+</script>
 </html>
