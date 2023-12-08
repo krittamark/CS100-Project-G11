@@ -6,7 +6,7 @@ const router = express.Router();
 const fileUpload = require('express-fileupload');
 const fs = require('fs');
 
-router.get('/passport',  (req, res) => {
+router.get('/passport', (req, res) => {
   fs.readFile('databases/records.json', 'utf8', (err, data) => {
     if (err) {
       console.error('Error reading records.json:', err);
@@ -39,7 +39,7 @@ router.post('/passport', fileUpload(), (req, res) => {
   console.log(req.body);
   // Check for mandatory fields in the incoming request
   if (!data.name || !data.studentID || !data.email || !data.workTitle ||
-    !data.activityType || !data.academicYear || !data.semester || !data.startDate || !data.endDate || !data.location || !data.description || !req.activityImage) {
+    !data.activityType || !data.academicYear || !data.semester || !data.startDate || !data.endDate || !data.location || !data.description) {
     return res.status(400).send({
       success: false,
       code: 400,
@@ -72,7 +72,7 @@ router.post('/passport', fileUpload(), (req, res) => {
     endDate: data.endDate,
     location: data.location,
     description: data.description,
-    activityImage: "assets/images/activities/" + data.workTitle + ".jpg"
+    activityImage: "assets/images/activities/" + String(data.workTitle).replace(" ", "_") + ".jpg"
   };
 
   let records = [];
@@ -87,19 +87,6 @@ router.post('/passport', fileUpload(), (req, res) => {
 
   records.push(record);
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
-  console.log(req.files);
-  let activityImage = req.files.activityImage;
-  activityImage.mv(`../html/assets/images/activities/${data.workTitle}.jpg`, (err) => {
-    if (err) {
-      console.log(err);
-      return res.status(500).send({
-        success: false,
-        code: 500,
-        message: 'Internal server error',
-        data: null
-      });
-    }
-  });
   res.status(200).json({
     success: true,
     code: 200,
