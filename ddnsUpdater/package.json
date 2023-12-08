@@ -1,0 +1,16 @@
+{
+  "name": "ddnsupdater",
+  "version": "1.0.0",
+  "description": "",
+  "main": "updater.js",
+  "scripts": {
+    "start": "node updater.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.3.1"
+  }
+}
