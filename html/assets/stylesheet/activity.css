@@ -190,3 +190,13 @@
     width: 50%;
   }
 }
+
+.form__input:user-invalid {
+  border-color: red;
+}
+
+label::after {
+  content: "*";
+  margin-left: 4px;
+  color: red;
+}
