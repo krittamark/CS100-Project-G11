@@ -123,6 +123,11 @@ document
     event.preventDefault();
 
     const formData = new FormData(event.target);
+    const payload = Object.fromEntries(formData.entries());
+
+    payload.activityImage = await toBase64(
+      document.getElementById("activityImage").files[0]
+    );
 
     try {
       let response = await fetch(`${apiServer}/passport`, {
@@ -130,7 +135,7 @@ document
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(Object.fromEntries(formData)),
+        body: JSON.stringify(payload),
       });
 
       let result = await response.json();
