@@ -31,3 +31,7 @@ sudo cp ~/cs100_g11/nginx.conf /etc/nginx/nginx.conf
 
 # Reload nginx configuration
 sudo nginx -s reload
+
+# Update ddns of domain api-g11.krittamark.com and g11.krittamark.com
+cd ~/cs100_g11/ddnsUpdater && sudo npm install
+node updater.js

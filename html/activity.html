@@ -12,13 +12,13 @@
 
 <body>
   <div class="topnav" id="myTopnav">
-    <a href="index.html">
+    <a href="/">
       <img src="assets/images/logo/Passport-Landscape.svg" alt="" class="logo" />
     </a>
-    <a href="index.html">Home</a>
-    <a href="activity.html">Our Activity</a>
-    <a href="index.html#sponsor">Our Sponsor</a>
-    <a href="index.html#team">Our Team</a>
+    <a href="/">Home</a>
+    <a href="/activity.html">Our Activity</a>
+    <a href="/#sponsor">Our Sponsor</a>
+    <a href="/#team">Our Team</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -31,7 +31,11 @@
         Create activity
       </button>
     </div>
-    <div class="activity__wrapper"></div>
+    <div class="activity__wrapper">
+      
+      
+
+    </div>
   </section>
 
   <dialog id="activityDialog" class="form__dialog">
@@ -141,63 +145,17 @@
       </div>
 
       <div class="form__group">
-        <button class="form__input form__submit" type="submit" id="submit">
-          Submit
-        </button>
+        <button class="form__input form__submit" type="submit" id="submit">Submit</button>
       </div>
     </form>
   </dialog>
 </body>
 
 <script src="assets/javascript/activityFormValidation.js"></script>
+<script src="assets/javascript/activityFunction.js"></script>
+<script src="assets/javascript/navbar.js"></script>
 <script>
-  const apiServer = "http://localhost:5001";
-  function createActivityElement(data) {
-    const activityElement = document.createElement("div");
-    activityElement.classList.add("activity__item");
-
-    const activityImageWrapper = document.createElement("div");
-    activityImageWrapper.classList.add("activityImage__wrapper");
-
-    const activityImage = document.createElement("img");
-    activityImage.classList.add("activityImage__image");
-    activityImage.src = data.activityImage;
-    activityImage.alt = "Activity Image";
-
-    const activityImageGradient = document.createElement("div");
-    activityImageGradient.classList.add("activityImage__gradient");
-
-    const activityDescription = document.createElement("span");
-    activityDescription.classList.add("activity__description");
-    activityDescription.innerText = data.description;
-
-    activityImageGradient.appendChild(activityDescription);
-    activityImageWrapper.appendChild(activityImage);
-    activityImageWrapper.appendChild(activityImageGradient);
-
-    const activityContentWrapper = document.createElement("div");
-    activityContentWrapper.classList.add("activityContent__wrapper");
-
-    const activityTitle = document.createElement("span");
-    activityTitle.classList.add("activity__title");
-    activityTitle.innerText = data.workTitle;
-
-    const activityLocationIcon = document.createElement("i");
-    activityLocationIcon.classList.add("icon", "icon-pin");
-
-    const activityLocation = document.createElement("span");
-    activityLocation.classList.add("activity__location");
-    activityLocation.innerText = data.location;
-
-    activityContentWrapper.appendChild(activityTitle);
-    activityContentWrapper.appendChild(activityLocationIcon);
-    activityContentWrapper.appendChild(activityLocation);
-
-    activityElement.appendChild(activityImageWrapper);
-    activityElement.appendChild(activityContentWrapper);
-
-    return activityElement;
-  }
+  const apiServer = "https://api.g11.krittamark.com";
 
   document.addEventListener("DOMContentLoaded", async () => {
     //request data from server
@@ -231,16 +189,6 @@
       activityDialog.close();
     }
   });
-
-
-  function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-      x.className += " responsive";
-    } else {
-      x.className = "topnav";
-    }
-  }
 </script>
 
 </html>

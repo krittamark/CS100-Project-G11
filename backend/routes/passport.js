@@ -72,7 +72,8 @@ router.post('/passport', fileUpload(), (req, res) => {
     endDate: data.endDate,
     location: data.location,
     description: data.description,
-    activityImage: "assets/images/activities/" + String(data.workTitle).replace(" ", "_") + ".jpg"
+    activityImage: "assets/images/activities/" + String(data.workTitle).replaceAll(" ", "_") + Date.now() + ".png",
+    id: String(data.workTitle).replaceAll(" ", "_") + Date.now()
   };
 
   let records = [];
@@ -86,6 +87,10 @@ router.post('/passport', fileUpload(), (req, res) => {
   }
 
   records.push(record);
+  data.activityImage = data.activityImage.replace('data:', '').replace(/^.+,/, '');
+  const image = Buffer.from(data.activityImage, 'base64');
+
+  fs.writeFileSync('../html/assets/images/activities/' + String(data.workTitle).replaceAll(" ", "_") + Date.now() + '.png', image);
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
   res.status(200).json({
     success: true,

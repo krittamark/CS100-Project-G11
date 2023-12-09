@@ -71,8 +71,13 @@
 }
 .slideGallery__row:nth-child(1) {
   animation-delay: 0s;
-  flex-direction: row-reverse;
+  flex-direction: row-reverse; 
 }
+
+.slideGallery__row:nth-child(2) {
+  flex-direction: row-reverse; 
+}
+
 @keyframes slideGallery {
   0% {
     transform: translateX(0);

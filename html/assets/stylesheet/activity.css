@@ -95,10 +95,12 @@
 
 .activity__wrapper {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
   margin: 0 auto;
+  flex-wrap: wrap;
+  padding: 0 10%;
+  align-items: flex-start;
 }
 
 .activity__item {
@@ -134,10 +136,9 @@
 }
 .activityImage__gradient {
   display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   padding: 25px;
   position: absolute;
   bottom: 0;
@@ -154,14 +155,28 @@
   );
 
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.25, 1);
+  color: #fff;
 }
-.activity__description {
-  opacity: 0;
+
+.activityDesc__wrapper {
+}
+.activityDesc__title {
+  font-size: 0.85em;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.activityDesc__text {
+  color: inherit;
   font-size: 0.75em;
   font-weight: 400;
   margin: 0;
   padding: 0;
-  color: #fff;
   transition: opacity 400ms cubic-bezier(0.4, 0, 0.25, 1);
 }
 .activityContent__wrapper {
@@ -177,11 +192,32 @@
   font-weight: 600;
   margin: 0;
   padding: 0;
+  max-width: 50%;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.activityLocation__Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.activityLocation__text {
+  font-size: 0.75em;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  color: #000;
 }
 
 @media (min-width: 600px) {
   .form__dialog {
     width: 70%;
+  }
+  .activity__item {
+    width: 45%;
+    max-width: 300px;
   }
 }
 
@@ -192,11 +228,17 @@
 }
 
 .form__input:user-invalid {
-  border-color: red;
+  border-color: #ff0000;
 }
 
 label::after {
   content: "*";
-  margin-left: 4px;
-  color: red;
+  margin-left: 2px;
+  color: #ff0000;
+  font-size: .75em;
+}
+
+i.icon.icon-pin::before {
+  height: 1em;
+  content: url(../images/LocationPin.svg);
 }
