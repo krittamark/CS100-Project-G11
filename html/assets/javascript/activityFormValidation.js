@@ -140,7 +140,7 @@ document
 
       let result = await response.json();
 
-      if (result.status == "success") {
+      if (result.success) {
         alert("Activity created successfully.");
         window.location.href = `activity.html#${result.data.id}`;
       } else {
