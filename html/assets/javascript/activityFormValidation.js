@@ -125,9 +125,12 @@ document
     const formData = new FormData(event.target);
     const payload = Object.fromEntries(formData.entries());
 
+    console.log("Beifre manipulate: ", payload);
     payload.activityImage = await toBase64(
       document.getElementById("activityImage").files[0]
     );
+
+    console.log("After manipulate: ", payload);
 
     try {
       let response = await fetch(`${apiServer}/passport`, {
