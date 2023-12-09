@@ -59,6 +59,7 @@ router.post('/passport', fileUpload(), (req, res) => {
     });
   }
 
+  const dateTime = Date.now();
   // Structure the record for saving
   const record = {
     name: data.name,
@@ -72,8 +73,8 @@ router.post('/passport', fileUpload(), (req, res) => {
     endDate: data.endDate,
     location: data.location,
     description: data.description,
-    activityImage: "assets/images/activities/" + String(data.workTitle).replaceAll(" ", "_") + Date.now() + ".png",
-    id: String(data.workTitle).replaceAll(" ", "_") + Date.now()
+    activityImage: "assets/images/activities/" + String(data.workTitle).replaceAll(" ", "_") + dateTime + ".png",
+    id: String(data.workTitle).replaceAll(" ", "_") + dateTime
   };
 
   let records = [];
@@ -90,7 +91,7 @@ router.post('/passport', fileUpload(), (req, res) => {
   data.activityImage = data.activityImage.replace('data:', '').replace(/^.+,/, '');
   const image = Buffer.from(data.activityImage, 'base64');
 
-  fs.writeFileSync('../html/assets/images/activities/' + String(data.workTitle).replaceAll(" ", "_") + Date.now() + '.png', image);
+  fs.writeFileSync('../html/assets/images/activities/' + String(data.workTitle).replaceAll(" ", "_") + dateTime + '.png', image);
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
   res.status(200).json({
     success: true,
