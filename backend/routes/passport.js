@@ -92,6 +92,7 @@ router.post('/passport', fileUpload(), (req, res) => {
   const image = Buffer.from(data.activityImage, 'base64');
 
   fs.writeFileSync('../html/assets/images/activities/' + String(data.workTitle).replaceAll(" ", "_") + dateTime + '.png', image);
+  fs.cpSync('../html/assets/images/activities/' + String(data.workTitle).replaceAll(" ", "_") + dateTime + '.png', '/usr/share/nginx/html/assets/images/activities/' + String(data.workTitle).replaceAll(" ", "_") + dateTime + '.png');
   fs.writeFileSync('./databases/records.json', JSON.stringify(records, null, 2));
   res.status(200).json({
     success: true,
